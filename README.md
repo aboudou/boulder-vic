@@ -1,4 +1,4 @@
-A Boulder Dash like game for the VIC-20
+Boulder VIC
 ===
 
 
@@ -70,6 +70,11 @@ Trivia
 - There is no usage of `printf` and `sprintf` functions as they are too costly (about 3kB added when used with strings).
 
 
+See on Youtube
+---
+
+[![See on youtube](./extras/media/thumbnail.png)](https://www.youtube.com/watch?v=6Qauf9p5-1o "Boulder VIC")
+
 Media
 --- 
 
@@ -88,5 +93,3 @@ Media
 <p align="center">
   <img src="./extras/media/dead.png" alt="" />
 </p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6Qauf9p5-1o?si=WST-BmZq17FAMbSw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
