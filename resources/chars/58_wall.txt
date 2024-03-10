@@ -1,0 +1,10 @@
+// Wall character
+12345678
+XXXXXXXX1
+XX    XX2
+X X  X X3
+X  XX  X4
+X  XX  X5
+X X  X X6
+XX    XX7
+XXXXXXXX8

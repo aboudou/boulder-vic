@@ -1,0 +1,4 @@
+# git ignores
+*~
+build
+.DS_Store

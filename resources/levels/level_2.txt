@@ -1,0 +1,25 @@
+// First line always filled with "-", "W" for wall, "P" for player, "R" for rock, "D" for diamond
+1234567890123456789012
+----------------------1
+WWWWWWWWWWWWWWWWWWWWWW2
+W  RR W R   R WD     W3
+W  PR W  RDR DWR     W4
+W  RR W   R   W    D W5
+W        R R       R W6
+W  RR W R   R W   RRRW7
+W   D W D     W    DDW8
+W     W       W    DDW9
+WWWWWWWWWWDWWWWWWWWWWW0
+W    DW       WR R RDW1
+W RRRRW       WR D R W2
+W          RR    R R W3
+W    RWRR  RD W  R R W4
+W    RW D  R  W  R D W5
+W    DW    R  W  R R W6
+WWWWWWWWWW WWWWWWWWWWW7
+W     WR    RDW--RR--W8
+W RRR WRDR  RRW--RR--W9
+W RR          ---DD--W0
+W RD RW   RD  W--RR--W1
+W    RW   RRR W--RR--W2
+WWWWWWWWWWWWWWWWWWWWWW3

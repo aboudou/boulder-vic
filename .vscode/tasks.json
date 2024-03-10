@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "command": "${workspaceFolder}/resources/gencharset.sh",
+            "group": {
+                "kind": "build",
+            },
+            "label": "Create charset.bin",
+        },
+        {
+            "type": "shell",
+            "command": "${workspaceFolder}/resources/genlevels.sh",
+            "group": {
+                "kind": "build",
+            },
+            "label": "Create level files",
+            "dependsOn": [
+                "Create charset.bin"
+            ],
+        },
+        {
+            "type": "shell",
+            "command": "cp ${workspaceFolder}/resources/*.bin ${workspaceFolder}/../disk/",
+            "group": {
+                "kind": "build",
+            },
+            "label": "Copy binary files",
+            "dependsOn": [
+                "Create level files"
+            ],
+        },
+        {
+            "type": "vs64",
+            "action": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "label": "build project",
+            "dependsOn": [
+                "Copy binary files"
+            ],
+        },
+    ]
+}

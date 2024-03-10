@@ -1,0 +1,20 @@
+{
+    "env": {
+        "llvmPath": "/Users/aboudou/Library/CloudStorage/Dropbox/Arnaud/VIC-20/llvm-mos"
+      },
+    "configurations": [
+        {
+            "name": "C64",
+            "compilerPath": "${llvmPath}/bin/mos-clang++",
+            "cppStandard": "c++20",
+            "cStandard": "c99",
+            "includePath": [
+                "${llvmPath}/mos-platform/vic20/include",
+                "${llvmPath}/mos-platform/commodore/include",
+                "${llvmPath}/mos-platform/common/include",
+                "${workspaceFolder}/src/include"
+            ]
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,21 @@
+{
+    "name": "boulder",
+    "description": "Boulder Dash alike",
+    "toolkit": "llvm",
+    "machine": "vic20",
+    "sources": [
+        "src/main.cpp",
+        "src/display/display.cpp",
+        "src/gameplay/gameplay.cpp",
+        "src/graphics/graphics.cpp",
+        "src/keyboard/keyboard.cpp",
+        "src/sound/sound.cpp"
+    ],
+    "build": "release",
+    "definitions": [],
+    "includes": [
+        "src/include"
+    ],
+    "args": [],
+    "compiler": ""
+}

@@ -1,0 +1,4 @@
+{
+    "C_Cpp.codeAnalysis.clangTidy.path": "/Users/aboudou/Library/CloudStorage/Dropbox/Arnaud/VIC-20/llvm-mos/bin/clang-tidy",
+    "cmake.configureOnOpen": false
+}
