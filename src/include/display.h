@@ -27,7 +27,7 @@ void setCharacterAtPosition(const uint8_t line, const uint8_t row, const char ch
 /// @param line the line of the character
 /// @param row the row of the character
 /// @return the character code
-int getCharacterAtPosition(const uint8_t line, const uint8_t row);
+uint8_t getCharacterAtPosition(const uint8_t line, const uint8_t row);
 
 /// @brief Fill the screen with given char and color
 /// @param character the character code
@@ -44,14 +44,14 @@ void setStringAtPosition(const uint8_t line, uint8_t row, const char text[], con
 /// @brief Convert a 16bit integer (max value = 65535) to string
 /// @param number the number to convert
 /// @return the result string
-void integerToString(const uint16_t number, char *string);
+void integerToString(const uint8_t number, char *string);
 
 /// @brief Display a 16bit integer (max value = 65535) at a given position
 /// @param line the line of the number
 /// @param row the starting row of the number
 /// @param number the number to display
 /// @param color the color of the text
-void setIntegerAtPosition(const uint8_t line, const uint8_t row, uint16_t number, const char color);
+void setIntegerAtPosition(const uint8_t line, const uint8_t row, uint8_t number, const char color);
 
 /// @brief Get the position of a given item
 /// @param line the line of the item
@@ -61,4 +61,4 @@ void getItemPosition(uint8_t &line, uint8_t &row, const ItemType item);
 
 /// @brief Get the number of a given item
 /// @param item the item
-int countItem(const ItemType item);
+uint8_t countItem(const ItemType item);

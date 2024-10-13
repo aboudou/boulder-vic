@@ -87,7 +87,7 @@ char getTextCodeFromChar(const char character) {
 }
 
 void setScreenColors(const uint8_t borderColor, const uint8_t screenColor) {
-    int colors = SCREEN_COLOR_ADDRESS;
+    uint8_t colors = SCREEN_COLOR_ADDRESS;
     colors = (colors & 248) | borderColor;
     colors = (colors & 15) | (screenColor * 16);
     SCREEN_COLOR_ADDRESS = colors;
@@ -100,7 +100,7 @@ void setCharacterAtPosition(const uint8_t line, const uint8_t row, const char ch
     *colorAdress = color;
 }
 
-int getCharacterAtPosition(const uint8_t line, const uint8_t row) {
+uint8_t getCharacterAtPosition(const uint8_t line, const uint8_t row) {
     char* positionAddress = &SCREEN_RAM_ADDRESS + (row - 1) + (22 * (line - 1));
     return *positionAddress;
 }
@@ -115,29 +115,17 @@ void fillScreenWith(const char character, const char color) {
 
 void setStringAtPosition(const uint8_t line, const uint8_t row, const char text[], const char color) {
     uint8_t currentRow = row;
-    for (int i = 0; i < strlen(text); i++) {
+    for (uint8_t i = 0; i < strlen(text); i++) {
         setCharacterAtPosition(line, currentRow, getTextCodeFromChar(text[i]), color);
         currentRow++;
     }
 }
 
-void integerToString(const uint16_t number, char *string) {
-    uint16_t numberToConvert = number;
-    if (numberToConvert > 65535) { return; }
+void integerToString(const uint8_t number, char *string) {
+    uint8_t numberToConvert = number;
+    if (numberToConvert > 255) { return; }
 
     uint8_t i = 0;
-    if (numberToConvert >= 10000) {
-        uint8_t extract = numberToConvert / 10000;
-        string[i] = extract + '0';
-        i++;
-        numberToConvert = numberToConvert - (extract * 10000);
-    }
-    if (numberToConvert >= 1000) {
-        uint8_t extract = numberToConvert / 1000;
-        string[i] = extract + '0';
-        i++;
-        numberToConvert = numberToConvert - (extract * 1000);
-    }
     if (numberToConvert >= 100) {
         uint8_t extract = numberToConvert / 100;
         string[i] = extract + '0';
@@ -156,7 +144,7 @@ void integerToString(const uint16_t number, char *string) {
     }
 }
 
-void setIntegerAtPosition(const uint8_t line, const uint8_t row, const uint16_t number, const char color) {
+void setIntegerAtPosition(const uint8_t line, const uint8_t row, const uint8_t number, const char color) {
     char string[6] = "";
     integerToString(number, string);
 
@@ -175,8 +163,8 @@ void getItemPosition(uint8_t &line, uint8_t &row, const ItemType item) {
     }
 }
 
-int countItem(const ItemType item) {
-    int count = 0;
+uint8_t countItem(const ItemType item) {
+    uint8_t count = 0;
     for (uint8_t i = MIN_VERT_POSITION; i <= MAX_VERT_POSITION; i++) {
         for (uint8_t j = MIN_VERT_POSITION; j <= MAX_VERT_POSITION; j++) {
             if (getCharacterAtPosition(j, i) == item) {

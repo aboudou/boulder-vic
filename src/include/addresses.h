@@ -25,4 +25,6 @@
 #define SND_NOISE_CHANNEL_ADDRESS   *(char*)0x900D
 #define SND_VOLUME_ADDRESS          *(char*)0x900E
 
-#define CLOCK_ADDRESS               *(char*)0x00A2
+#define CLOCK_1_ADDRESS             *(char*)0x00A0
+#define CLOCK_2_ADDRESS             *(char*)0x00A1
+#define CLOCK_3_ADDRESS             *(char*)0x00A2

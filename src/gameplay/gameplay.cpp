@@ -24,7 +24,7 @@ void computeNewPlayerPosition(const int keyCode, uint8_t& line, uint8_t& row) {
 }
 
 bool validateMove(const uint8_t currentLine, const uint8_t currentRow, bool &updateScore) {
-    int charCode = getCharacterAtPosition(currentLine, currentRow);
+    uint8_t charCode = getCharacterAtPosition(currentLine, currentRow);
 
     if (charCode == ROCK_CHAR || charCode == WALL_CHAR) {
         return false;
@@ -76,11 +76,11 @@ void getPlayerPosition(uint8_t &line, uint8_t &row) {
     getItemPosition(line, row, playerItem);
 }
 
-int countDiamonds() {
+uint8_t countDiamonds() {
     return countItem(diamondItem);
 }
 
-void displayHeader(const int diamondCount, const int level) {
+void displayHeader(const uint8_t diamondCount, const uint8_t level) {
     // One black line
     for (uint8_t i = MIN_HORI_POSITION; i <= MAX_HORI_POSITION; i++) {
         setCharacterAtPosition(1, i, EMPTY_CHAR, COLOR_BLACK);

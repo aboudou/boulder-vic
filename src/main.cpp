@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "gameplay.h"
-
+#include "utils.h"
 
 void displayAllCharacters() {
     uint8_t line = 1;
@@ -15,7 +15,7 @@ void displayAllCharacters() {
     }
 }
 
-void loadLevel(uint8_t &line, uint8_t &row, int &diamondCount, uint8_t &currentLevel, bool &displayTitleScreen) {
+void loadLevel(uint8_t &line, uint8_t &row, uint8_t &diamondCount, uint8_t &currentLevel, bool &displayTitleScreen) {
     if (currentLevel > MAX_LEVEL) {
         currentLevel = 1;
         displayTitleScreen = true;
@@ -43,10 +43,15 @@ int main(void) {
     // displayAllCharacters();
     // return 0;
 
+    // for (uint8_t i = 0; i <= 60; i++) {
+    //     setIntegerAtPosition(10,1,i,COLOR_BLUE);
+    //     pause(1.0);
+    // }
+
     uint8_t currentLevel = 1;
     uint8_t currentLine = 1;
     uint8_t currentRow = 1;
-    int diamondCount = 0;
+    uint8_t diamondCount = 0;
 
     bool displayTitleScreen = true;
     bool playerKilled = false;

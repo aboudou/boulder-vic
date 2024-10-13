@@ -43,7 +43,7 @@ void getPlayerPosition(uint8_t &line, uint8_t &row);
 /// @brief Count the number of diamonds
 /// @param line the line of the item
 /// @param row the row of the item
-int countDiamonds();
+uint8_t countDiamonds();
 
 /// @brief Display header (score + level)
-void displayHeader(const int diamondCount, const int level);
+void displayHeader(const uint8_t diamondCount, const uint8_t level);

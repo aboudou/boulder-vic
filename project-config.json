@@ -9,7 +9,8 @@
         "src/gameplay/gameplay.cpp",
         "src/graphics/graphics.cpp",
         "src/keyboard/keyboard.cpp",
-        "src/sound/sound.cpp"
+        "src/sound/sound.cpp",
+        "src/utils/utils.cpp"
     ],
     "build": "release",
     "definitions": [],

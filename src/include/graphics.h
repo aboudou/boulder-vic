@@ -7,36 +7,36 @@
 #include <vic20.h>
 #include "addresses.h"
 
-#define CHARSET_SIZE        (uint8_t)17
+#define CHARSET_SIZE        (uint8_t)44
 
 // Charset standard characters
-#define STD_A_CHAR          (uint8_t)1
-#define STD_B_CHAR          (uint8_t)2
-#define STD_C_CHAR          (uint8_t)3
-#define STD_D_CHAR          (uint8_t)4
-#define STD_E_CHAR          (uint8_t)5
-#define STD_F_CHAR          (uint8_t)6
-#define STD_G_CHAR          (uint8_t)7
-#define STD_H_CHAR          (uint8_t)8
-#define STD_I_CHAR          (uint8_t)9
-#define STD_J_CHAR          (uint8_t)10
-#define STD_K_CHAR          (uint8_t)11
-#define STD_L_CHAR          (uint8_t)12
-#define STD_M_CHAR          (uint8_t)13
-#define STD_N_CHAR          (uint8_t)14
-#define STD_O_CHAR          (uint8_t)15
-#define STD_P_CHAR          (uint8_t)16
-#define STD_Q_CHAR          (uint8_t)17
-#define STD_R_CHAR          (uint8_t)18
-#define STD_S_CHAR          (uint8_t)19
-#define STD_T_CHAR          (uint8_t)20
-#define STD_U_CHAR          (uint8_t)21
-#define STD_V_CHAR          (uint8_t)22
-#define STD_W_CHAR          (uint8_t)23
-#define STD_X_CHAR          (uint8_t)24
-#define STD_Y_CHAR          (uint8_t)25
-#define STD_Z_CHAR          (uint8_t)26
-#define STD_SPACE_CHAR      (uint8_t)32
+#define STD_SPACE_CHAR      (uint8_t)20
+#define STD_A_CHAR          (uint8_t)21
+#define STD_B_CHAR          (uint8_t)22
+#define STD_C_CHAR          (uint8_t)23
+#define STD_D_CHAR          (uint8_t)24
+#define STD_E_CHAR          (uint8_t)25
+#define STD_F_CHAR          (uint8_t)26
+#define STD_G_CHAR          (uint8_t)27
+#define STD_H_CHAR          (uint8_t)28
+#define STD_I_CHAR          (uint8_t)29
+#define STD_J_CHAR          (uint8_t)30
+#define STD_K_CHAR          (uint8_t)31
+#define STD_L_CHAR          (uint8_t)32
+#define STD_M_CHAR          (uint8_t)33
+#define STD_N_CHAR          (uint8_t)34
+#define STD_O_CHAR          (uint8_t)35
+#define STD_P_CHAR          (uint8_t)36
+#define STD_Q_CHAR          (uint8_t)37
+#define STD_R_CHAR          (uint8_t)38
+#define STD_S_CHAR          (uint8_t)39
+#define STD_T_CHAR          (uint8_t)40
+#define STD_U_CHAR          (uint8_t)41
+#define STD_V_CHAR          (uint8_t)42
+#define STD_W_CHAR          (uint8_t)43
+#define STD_X_CHAR          (uint8_t)44
+#define STD_Y_CHAR          (uint8_t)45
+#define STD_Z_CHAR          (uint8_t)46
 
 // Charset new characters
 #define ZERO_CHAR           (uint8_t)47

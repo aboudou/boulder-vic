@@ -1,0 +1,10 @@
+// K character
+12345678
+ X    X 1
+ X   X  2
+ X  X   3
+ XXX    4
+ X  X   5
+ X   X  6
+ X    X 7
+        8

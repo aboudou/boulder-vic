@@ -1,0 +1,10 @@
+// E character
+12345678
+ XXXXXX 1
+ X      2
+ X      3
+ XXXX   4
+ X      5
+ X      6
+ XXXXXX 7
+        8

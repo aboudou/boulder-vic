@@ -1,0 +1,10 @@
+// C character
+12345678
+   XXX  1
+  X   X 2
+ X      3
+ X      4
+ X      5
+  X   X 6
+   XXX  7
+        8
