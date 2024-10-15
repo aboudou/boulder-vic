@@ -2,7 +2,6 @@
  * Display utilities
  */
 #include <stdint.h>
-#include <string.h>
 #include "addresses.h"
 #include "graphics.h"
 
@@ -41,12 +40,12 @@ void fillScreenWith(const char character, const char color);
 /// @param color the color of the text
 void setStringAtPosition(const uint8_t line, uint8_t row, const char text[], const char color);
 
-/// @brief Convert a 16bit integer (max value = 65535) to string
+/// @brief Convert a 8bit integer (max value = 255) to string
 /// @param number the number to convert
 /// @return the result string
 void integerToString(const uint8_t number, char *string);
 
-/// @brief Display a 16bit integer (max value = 65535) at a given position
+/// @brief Display a 8bit integer (max value = 255) at a given position
 /// @param line the line of the number
 /// @param row the starting row of the number
 /// @param number the number to display

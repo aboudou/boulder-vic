@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include "addresses.h"
 
 /// @brief pause code execution for a given number of seconds
