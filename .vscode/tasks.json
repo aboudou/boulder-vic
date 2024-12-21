@@ -43,5 +43,16 @@
                 "Copy binary files"
             ],
         },
+        {
+            "type": "shell",
+            "command": "cp ${workspaceFolder}/build/boulder.prg ${workspaceFolder}/../disk/",
+            "group": {
+                "kind": "build",
+            },
+            "label": "Copy prg file",
+            "dependsOn": [
+                "build project"
+            ],
+        },
     ]
 }

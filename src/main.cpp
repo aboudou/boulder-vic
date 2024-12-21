@@ -66,7 +66,7 @@ int main(void) {
 
             setStringAtPosition(5, 6, "boulder  vic", COLOR_CYAN);
 
-            setStringAtPosition(10, 5, "arrows to move", COLOR_CYAN);
+            setStringAtPosition(10, 6, "xcvd to move", COLOR_CYAN);
             setStringAtPosition(11, 6, "r to restart", COLOR_CYAN);
             setStringAtPosition(12, 4, "get the diamonds", COLOR_CYAN);
             setStringAtPosition(13, 3, "do not get crushed", COLOR_CYAN);
@@ -76,7 +76,7 @@ int main(void) {
             for (;;) {
                 keyPressed = getKeyPressed();
 
-                if (keyPressed == KEY_SPACE) { 
+                if (keyPressed == KEY_SPACE) {
                     displayTitleScreen = false;
                     currentLevel = loadLevel(currentLine, currentRow, diamondCount, currentLevel, displayTitleScreen);
                     break;
@@ -141,7 +141,7 @@ int main(void) {
                         playerWon = true;
                         setStringAtPosition(1, 8, " success ", COLOR_GREEN);
                         setStringAtPosition(2, 1, " space for next level ", COLOR_GREEN);
-                        playSound(sfxPlayerWon);
+                        playSound(sfxPlayerWon); 
                 }
             }
         }
