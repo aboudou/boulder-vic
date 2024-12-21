@@ -13,7 +13,7 @@ It does include:
 - Colors (multiple !!)
 - Sound
 - Keyboard gameplay
-  - `X`, `C`, `C` and `D` keys to move
+  - `X`, `C`, `V` and `D` keys to move
   - `R` key to restart a level
 - Basic gravity management (rocks and diamonds can fall, don't stay below)
 
@@ -55,8 +55,8 @@ Levels
 
 You may add new levels using:
 
-- `resources/genlevels.sh` script, which takes all text files from `resources/levels` directory, and convert them to a binary file named `resources/level_<number>.bin`. Files MUST be named `level_<number>.txt` (with `char-id` between 0 and 63).
-- If you change the levels, you may modify `src/include/gameplay.h` header file (`MAX_LEVEL` value).
+- `resources/genlevels.sh` script, which takes all text files from `resources/levels` directory, and convert them to a binary file named `resources/level_<number>.bin`. Files MUST be named `level_<number>.txt`.
+- If you add or remove levels, you may modify `src/include/gameplay.h` header file (`MAX_LEVEL` value).
 - The files `resources/level_<number>.bin` are then copied to the `disk` directory of the repository
 
 A special `resources/levels/title.txt` (and `resources/title.bin`) file is dedicated to the title screen, and is included in the above process.
