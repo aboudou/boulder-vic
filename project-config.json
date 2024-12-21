@@ -18,5 +18,8 @@
         "src/include"
     ],
     "args": [],
-    "compiler": ""
+    "compiler": "",
+    "linkerFlags": [
+        "--config", "./extras/project.cfg"   
+    ]
 }

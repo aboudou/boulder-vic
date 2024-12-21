@@ -36,7 +36,6 @@ How to build
 
 - Install Visual Code Studio + [VS64 extension](https://marketplace.visualstudio.com/items?itemName=rosc.vs64)
 - Install [LLVM-MOS-SDK](https://github.com/llvm-mos/llvm-mos-sdk)
-- Replace file `/path/llvm-mos-sdk/mos-platform/vic20/lib/link.ld` with the provided in the folder `extras` from this repository (make a backup before)
 - Update `llvmPath` setting from `.vscode/c_cpp_properties.json` as needed
 - (Optionnal) Install [VICE emulator] (https://vice-emu.sourceforge.io/), and set it's setting as needed. You may want to setup its drive to `Virtual device` with type `Host file system` and set the host directory to the `disk` file in this this repository
 
@@ -68,6 +67,14 @@ Trivia
 --- 
 
 - There is no usage of `printf` and `sprintf` functions as they are too costly (about 3kB added when used with strings).
+- The memory map is described below (with 3 kB expansion)
+  - 0x0401 : Start of user RAM
+  - 0x1DC8 : Start of user RAM reserved for custom charset
+  - 0x1DFF : End of user RAM
+
+- User RAM size is 6655 bytes
+- Max program RAM size is 6599 bytes
+- Custom charset size is 56 bytes (7 characters, 8 bytes each)
 
 
 See on Youtube

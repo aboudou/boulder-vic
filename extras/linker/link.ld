@@ -19,9 +19,9 @@ __basic_zp_start = 0x0000;
 __basic_zp_end = 0x0090;
 
 MEMORY {
-    /* ram (rw) : ORIGIN = 0x0401, LENGTH = 0x19FF */ /* With default charset */
-    /* ram (rw) : ORIGIN = 0x0401, LENGTH = 0x17FF */ /* With full 512 bytes user charset space */
-    ram (rw) : ORIGIN = 0x0401, LENGTH = 0x19C7       /* With 352 bytes user charset space (7 chars) */ 
+    /* ram (rw) : ORIGIN = 0x0401, LENGTH = 0x19FF */ /* 3kB - With default charset */
+    /* ram (rw) : ORIGIN = 0x0401, LENGTH = 0x17FF */ /* 3kB - With full 512 bytes user charset space */
+    ram (rw) : ORIGIN = 0x0401, LENGTH = 0x19C7       /* 3kB - With 56 bytes user charset space (7 chars) */ 
 }
 
 INCLUDE commodore.ld
