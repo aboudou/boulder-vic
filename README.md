@@ -13,7 +13,7 @@ It does include:
 - Colors (multiple !!)
 - Sound
 - Keyboard gameplay
-  - arrow keys to move
+  - `X`, `C`, `C` and `D` keys to move
   - `R` key to restart a level
 - Basic gravity management (rocks and diamonds can fall, don't stay below)
 
