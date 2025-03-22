@@ -4,20 +4,20 @@
                       2
  WWWWWWWWWWWWWWWWWWWW 3
  W------------------W 4
- W-D--------------D-W 5
+ W-D-boulder--vic-D-W 5
  W------------------W 6
  WWWWWWWWWWWWWWWWWWWW 7
                       8
  -------------------- 9
- -------------------- 0
- -------------------- 1
- -------------------- 2
- -------------------- 3
+ ----xcvd-to-move---- 0
+ ----r-to-restart---- 1
+ --get-the-diamonds-- 2
+ -do-not-get-crushed- 3
  --------P--P-------- 4
                       5
  RRRRRRRRRRRRRRRRRRRR 6
  R------------------R 7
- R------------------R 8
+ R--space-to-begin--R 8
  R------------------R 9
  R------------------R 0
  RRRRRRRRRRRRRRRRRRRR 1

@@ -44,6 +44,9 @@ ItemColor getColorForItem(const ItemType item) {
 
         case playerItem:
             return playerColor;
+
+        default:
+            return titleTextColor;
     }
 }
 

@@ -64,15 +64,6 @@ int main(void) {
 
             loadLevel((const char*)"title.bin");
 
-            setStringAtPosition(5, 6, "boulder  vic", COLOR_CYAN);
-
-            setStringAtPosition(10, 6, "xcvd to move", COLOR_CYAN);
-            setStringAtPosition(11, 6, "r to restart", COLOR_CYAN);
-            setStringAtPosition(12, 4, "get the diamonds", COLOR_CYAN);
-            setStringAtPosition(13, 3, "do not get crushed", COLOR_CYAN);
-
-            setStringAtPosition(18, 5, "space to begin", COLOR_CYAN);
-
             for (;;) {
                 keyPressed = getKeyPressed();
 
@@ -121,8 +112,8 @@ int main(void) {
 
                     if (playerKilled) {
                         setItemPosition(deadPlayerItem, currentLine, currentRow);
-                        setStringAtPosition(1, 7, "game over ", COLOR_RED);
-                        setStringAtPosition(2, 3, " space to retry ", COLOR_RED);
+                        setStringAtPosition(1, 1, "       game over      ", COLOR_RED);
+                        setStringAtPosition(2, 1, "    space to retry    ", COLOR_RED);
                         playSound(sfxPlayerLose);
 
                     }
@@ -139,7 +130,7 @@ int main(void) {
                     displayHeader(diamondCount, currentLevel);
                 } else {
                         playerWon = true;
-                        setStringAtPosition(1, 8, " success ", COLOR_GREEN);
+                        setStringAtPosition(1, 1, "       success        ", COLOR_GREEN);
                         setStringAtPosition(2, 1, " space for next level ", COLOR_GREEN);
                         playSound(sfxPlayerWon); 
                 }

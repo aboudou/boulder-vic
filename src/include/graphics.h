@@ -74,7 +74,8 @@ enum ItemColor {
     backgroundColor = COLOR_YELLOW,
     emptyColor = COLOR_BLACK,
     deadPlayerColor = COLOR_RED,
-    playerColor = COLOR_GREEN
+    playerColor = COLOR_GREEN,
+    titleTextColor = COLOR_WHITE
 };
 
 
