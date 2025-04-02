@@ -1,6 +1,6 @@
 {
     "env": {
-        "llvmPath": "/Users/aboudou/Library/CloudStorage/Dropbox/Arnaud/VIC-20/llvm-mos"
+        "llvmPath": "/Users/aboudou/Developer/VIC-20/llvm-mos"
       },
     "configurations": [
         {
