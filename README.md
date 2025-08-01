@@ -35,7 +35,7 @@ How to build
 ---
 
 - Install Visual Code Studio + [VS64 extension](https://marketplace.visualstudio.com/items?itemName=rosc.vs64)
-- Install [LLVM-MOS-SDK](https://github.com/llvm-mos/llvm-mos-sdk)
+- Install [LLVM-MOS-SDK](https://github.com/llvm-mos/llvm-mos-sdk) - tested with version 22.3.0 
 - Update `llvmPath` setting from `.vscode/c_cpp_properties.json` as needed
 - (Optionnal) Install [VICE emulator] (https://vice-emu.sourceforge.io/), and set it's setting as needed. You may want to setup its drive to `Virtual device` with type `Host file system` and set the host directory to the `disk` file in this this repository
 
