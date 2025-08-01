@@ -112,7 +112,7 @@ int main(void) {
 
                     if (playerKilled) {
                         setItemPosition(deadPlayerItem, currentLine, currentRow);
-                        setStringAtPosition(1, 1, "       game over      ", COLOR_RED);
+                        setStringAtPosition(1, 2, "      game over     ", COLOR_RED);
                         setStringAtPosition(2, 1, "    space to retry    ", COLOR_RED);
                         playSound(sfxPlayerLose);
 
@@ -130,7 +130,7 @@ int main(void) {
                     displayHeader(diamondCount, currentLevel);
                 } else {
                         playerWon = true;
-                        setStringAtPosition(1, 1, "       success        ", COLOR_GREEN);
+                        setStringAtPosition(1, 2, "      success       ", COLOR_GREEN);
                         setStringAtPosition(2, 1, " space for next level ", COLOR_GREEN);
                         playSound(sfxPlayerWon); 
                 }
