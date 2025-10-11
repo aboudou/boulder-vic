@@ -78,13 +78,19 @@ int main(void) {
             if ((keyPressed == KEY_SPACE && playerKilled) || keyPressed == KEY_R) {
                 currentLevel = loadLevel(currentLine, currentRow, diamondCount, currentLevel, displayTitleScreen);
                 playerKilled = false;
-            }
-            if (keyPressed == KEY_SPACE && playerWon) {
+            } else if (keyPressed == KEY_SPACE && playerWon) {
                 currentLevel++;
                 currentLevel = loadLevel(currentLine, currentRow, diamondCount, currentLevel, displayTitleScreen);
                 playerWon = false;
-            }
-            if (keyPressed != 0 && !playerKilled) {
+            } else if (keyPressed == KEY_T) {
+                displayTitleScreen = true;
+                playerKilled = false;
+                playerWon = false;
+                currentLevel = 1;
+                currentLine = 1;
+                currentRow = 1;
+                diamondCount = 0;
+            } else if (keyPressed != 0 && !playerKilled) {
                 const uint8_t previousLine = currentLine;
                 const uint8_t previousRow = currentRow;
 

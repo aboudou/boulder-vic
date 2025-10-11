@@ -10,6 +10,7 @@
 
 #define KEY_SPACE   (int)32
 #define KEY_R       (int)82
+#define KEY_T       (int)84
 
 /// @brief get keycode from pressed key
 /// @return the keycode
