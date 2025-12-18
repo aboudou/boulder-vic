@@ -34,24 +34,24 @@ void playSound(const SfxType type) {
     uint8_t channelsCount = 0;
     switch (type) {
         case sfxPlayerWalk:
-            channels[0] = { 128, 0, 0, 128, 0.1, true };
+            channels[0] = { 128, 0, 0, 128, uint16_t(0.1 * 60), true };
             channelsCount = 1;
             break;
 
         case sfxPlayerDiamond:
-            channels[0] = { 0, 0, 220, 0, 0.1, false };
+            channels[0] = { 0, 0, 220, 0, uint16_t(0.1 * 60), false };
             channelsCount = 1;
             break;
 
         case sfxPlayerWon:
-            channels[0] = { 0, 200, 0, 0, 0.2, true };
-            channels[1] = { 0, 0, 200, 0, 0.2, true };
-            channels[2] = { 0, 0, 225, 0, 0.2, false };
+            channels[0] = { 0, 200, 0, 0, uint16_t(0.2 * 60), true };
+            channels[1] = { 0, 0, 200, 0, uint16_t(0.2 * 60), true };
+            channels[2] = { 0, 0, 225, 0, uint16_t(0.2 * 60), false };
             channelsCount = 3;
             break;
 
         case sfxPlayerLose:
-            channels[0] = { 128, 0, 0, 128, 0.5, false };
+            channels[0] = { 128, 0, 0, 128, uint16_t(0.5 * 60), false };
             channelsCount = 1;
             break;
     }

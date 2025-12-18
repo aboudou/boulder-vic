@@ -9,7 +9,7 @@ struct SfxChannels {
     uint8_t sfxTenorFreq;   // Medium-ish
     uint8_t sfxSopranoFreq; // Treble-ish
     uint8_t sfxNoiseFreq;   
-    float sfxDuration;      // In seconds
+    uint16_t sfxDuration;   // In jiffies (1/60 second)
     bool hardCut;           // cut sound after duration or progressively lower volume
 };
 
