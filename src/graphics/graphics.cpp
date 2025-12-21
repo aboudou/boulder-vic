@@ -23,31 +23,21 @@ void colorizeLevel() {
 }
 
 ItemColor getColorForItem(const ItemType item) {
-    switch (item) {
-        case diamondItem: 
-            return diamondColor;
+    const ItemColor map[] = {
+        diamondColor,
+        wallColor,
+        rockColor,
+        backgroundColor,
+        emptyColor,
+        deadPlayerColor,
+        playerColor
+    };
 
-        case wallItem: 
-            return wallColor;
-
-        case rockItem: 
-            return rockColor;
-
-        case backgroundItem: 
-            return backgroundColor;
-
-        case emptyItem: 
-            return emptyColor;
-
-        case deadPlayerItem:
-            return deadPlayerColor;
-
-        case playerItem:
-            return playerColor;
-
-        default:
-            return titleTextColor;
-    }
+    const int base = (int)diamondItem;
+    int idx = (int)item - base;
+    if (idx < 0 || idx >= (int)(sizeof(map)/sizeof(map[0])))
+        return titleTextColor;
+    return map[idx];
 }
 
 /// @brief Load a file at a given RAM address.

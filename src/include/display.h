@@ -43,7 +43,7 @@ void setStringAtPosition(const uint8_t line, uint8_t row, const char text[], con
 /// @brief Convert a 8bit integer (max value = 255) to string
 /// @param number the number to convert
 /// @return the result string
-void integerToString(const uint8_t number, char *string);
+void integerToString(uint8_t number, char *string);
 
 /// @brief Display a 8bit integer (max value = 255) at a given position
 /// @param line the line of the number

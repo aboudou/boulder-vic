@@ -38,35 +38,24 @@ bool validateMove(const uint8_t currentLine, const uint8_t currentRow, bool &upd
 }
 
 bool applyGravityFromPositionAndKillPlayer(const uint8_t currentLine, const uint8_t currentRow) {
-    if (getCharacterAtPosition(currentLine, currentRow) == EMPTY_CHAR) {
-        // Check if character above this position is a rock or a diamond
-        if (currentLine > MIN_VERT_POSITION) {
-            const uint8_t aboveLine = currentLine - 1;
-            const uint8_t movingChar = getCharacterAtPosition(aboveLine, currentRow);
-            if (movingChar == DIAMOND_CHAR || movingChar == ROCK_CHAR) {
-                uint8_t belowLine = currentLine;
-                uint8_t belowChar = getCharacterAtPosition(belowLine, currentRow);
-                bool fallenItem = false;
-                while (belowLine <= MAX_VERT_POSITION && belowChar == EMPTY_CHAR) {
-                    setItemPosition(emptyItem, belowLine - 1, currentRow);
-                    setItemPosition((ItemType)movingChar, belowLine, currentRow);
+    uint8_t line = currentLine;
+    const uint8_t col = currentRow;
 
-                    belowLine++;
-                    belowChar = getCharacterAtPosition(belowLine, currentRow);
-                    fallenItem = true;
-                }
+    while (line > MIN_VERT_POSITION) {
+        const uint8_t above = line - 1;
+        const uint8_t moving = getCharacterAtPosition(above, col);
+        if (!(moving == DIAMOND_CHAR || moving == ROCK_CHAR)) break;
 
-                // Check if player is below a fallenItem
-                if (fallenItem) {
-                    if (belowChar == PLAYER_CHAR) {
-                        return true;
-                    }
-                }
-
-                // Recursively apply gravity to above items
-                applyGravityFromPositionAndKillPlayer(aboveLine, currentRow);
-            }
+        uint8_t dst = line;
+        while (dst <= MAX_VERT_POSITION && getCharacterAtPosition(dst, col) == EMPTY_CHAR) {
+            setItemPosition(emptyItem, dst - 1, col);
+            setItemPosition((ItemType)moving, dst, col);
+            dst++;
         }
+
+        if (dst <= MAX_VERT_POSITION && getCharacterAtPosition(dst, col) == PLAYER_CHAR) return true;
+
+        line = above;
     }
 
     return false;

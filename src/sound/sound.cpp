@@ -17,7 +17,7 @@ void generateSound(const SfxChannels channels[], const uint8_t &channelsCount) {
             // Lower volume
             for (int i = 10; i >= 0; i = i - 2) {
                 SND_VOLUME_ADDRESS = i;
-                pause(0.02);
+                pause(2);
             }
         }
 
